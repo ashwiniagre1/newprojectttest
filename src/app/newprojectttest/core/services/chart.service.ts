@@ -21,6 +21,10 @@ export class ChartService {
 		return this.httpClient.get('https://api.myjson.com/bins/pi5hw/');
 	}
 	
+	public getLineChart(): Observable<any> {
+		return this.httpClient.get('https://api.myjson.com/bins/10a3jo/');
+	}
+	
 	
 }
 
