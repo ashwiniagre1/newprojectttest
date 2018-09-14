@@ -1,0 +1,68 @@
+<amexio-row>
+    <amexio-column size="6">
+
+        <amexio-chart-area *ngIf="areachartLocalData" [data]="areachartLocalData" [height]="'400px'" [width]="'100%'">
+
+
+            <amexio-chart-title [title]="'Chart Title'" [font-size]="15">
+            </amexio-chart-title>
+
+
+
+            <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18">
+            </amexio-chart-legend>
+
+
+        </amexio-chart-area>
+
+    </amexio-column>
+    <amexio-column size="6">
+        <amexio-chart-bar *ngIf="barchartLocalData" [data]="barchartLocalData" [height]="'400px'" [width]="'100%'">
+
+            <amexio-chart-title [title]="'Chart Title'" [font-size]="15">
+            </amexio-chart-title>
+
+            <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18">
+            </amexio-chart-legend>
+
+        </amexio-chart-bar>
+    </amexio-column>
+</amexio-row>
+
+<amexio-row>
+    <amexio-column size="6">
+        <amexio-chart-pie *ngIf="piechartLocalData" [data]="piechartLocalData" [height]="'400px'" [width]="'100%'">
+            <amexio-chart-title [title]="'Chart Title'" [font-size]="15" [bold]="false" [italic]="false">
+            </amexio-chart-title>
+
+            <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18" [bold]="false">
+            </amexio-chart-legend>
+
+        </amexio-chart-pie>
+    </amexio-column>
+    <amexio-column size="6">
+        <amexio-chart-donut *ngIf="donutchartLocalData" [data]="donutchartLocalData" [height]="'400px'" [width]="'100%'">
+
+
+            <amexio-chart-title [title]="'Chart Title'" [font-size]="15">
+            </amexio-chart-title>
+
+
+
+            <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18">
+            </amexio-chart-legend>
+
+
+        </amexio-chart-donut>
+    </amexio-column>
+</amexio-row>
+
+<amexio-notification [data]="successMsgData" [vertical-position]="'top'" [horizontal-position]="'right'" [close-on-escape]="true" [background-color]="'green'" [auto-dismiss-msg]="true" [auto-dismiss-msg-interval]="4000">
+    <ng-template #amexioNotificationTemplates let-row="row">
+        <amexio-box>
+            <amexio-image [icon-class]="'fa fa-check'">
+            </amexio-image> &nbsp;&nbsp;
+            <amexio-label size="small-bold" font-color="black">{{row}}</amexio-label>
+        </amexio-box>
+    </ng-template>
+</amexio-notification>
